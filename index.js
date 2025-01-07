@@ -14,6 +14,14 @@ app.use(express.json());
 app.use(bodyParser.json());
 
 
+const loginRoutes = require("./src/modules/Login/login.routes");
+
+
+
+
+app.use("/api/starlit/v1", loginRoutes);
+
+
 
 // Database connection
 mongoose
